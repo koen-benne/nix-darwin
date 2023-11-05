@@ -96,15 +96,7 @@
     useUserPackages = true;
     users.koenbenne = {
       home.stateVersion = "23.05";
-      home.packages = with pkgs; [
-        dockutil
-        btop
-        neovim
-        nodejs
-        zoxide
-        git
-        ripgrep
-      ];
+      home.packages = pkgs.callPackage ./packages.nix {};
     };
   };
 
