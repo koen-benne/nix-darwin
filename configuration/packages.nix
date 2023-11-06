@@ -11,4 +11,7 @@ with pkgs;
   ripgrep
   lazygit
   gitui
+
+  yabai
+  skhd
 ]

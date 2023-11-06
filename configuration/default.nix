@@ -97,6 +97,16 @@
     users.koenbenne = {
       home.stateVersion = "23.05";
       home.packages = pkgs.callPackage ./packages.nix {};
+      home.activation = {
+        # setWallpaper = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+        #   osascript -e '
+        #     set desktopImage to POSIX file "${config.users.users."koenbenne".home}/.config/nix-darwin/wallpaper.jpg"
+        #     tell application "Finder"
+        #       set desktop picture to desktopImage
+        #     end tell
+        #   '
+        # '';
+      };
     };
   };
 
@@ -112,7 +122,7 @@
       options = "--sort name --view grid --display folder";
     }
     {
-      path = "${config.users.users."koenbenne".home}/.local/share/downloads";
+      path = "${config.users.users."koenbenne".home}/Downloads";
       section = "others";
       options = "--sort name --view grid --display stack";
     }
