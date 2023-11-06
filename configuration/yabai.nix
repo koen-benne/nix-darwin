@@ -1,5 +1,7 @@
 { pkgs, lib, inputs, config, ... }:
-
+let
+  scripts = ../scripts/sketchybar;
+in
 {
   services.yabai = {
     enable = true;

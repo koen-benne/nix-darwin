@@ -1,11 +1,6 @@
-{ pkgs
-, lib
-, inputs
-, config
-, ...
-}:
+{ pkgs, lib, inputs, config, ... }:
 let
-  scripts = ../../../configs/sketchybar;
+  scripts = ../scripts/sketchybar;
 in
 {
   services.sketchybar = {
