@@ -3,6 +3,8 @@
 {
   imports = [
    ./dock
+   ./yabai.nix
+   ./sketchybar.nix
   ];
 
   environment.systemPackages = [
