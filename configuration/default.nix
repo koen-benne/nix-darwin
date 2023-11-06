@@ -5,6 +5,7 @@
    ./dock
    ./yabai.nix
    ./sketchybar.nix
+   ./skhd.nix
   ];
 
   environment.systemPackages = [
@@ -76,6 +77,8 @@
 
       dock = {
         autohide = true;
+        showhidden = true;
+        mru-spaces = false;
         show-recents = false;
         launchanim = true;
         orientation = "left";

@@ -14,7 +14,7 @@ in
 
       ############## BAR ##############
       sketchybar --bar height=40 \
-                       position=bottom \
+                       position=top \
                        shadow=on \
                        color=0xff161616 \
 
@@ -30,7 +30,7 @@ in
                            background.height=40
 
       ############## ITEMS ###############
-      SPACE_ICONS=("一" "二" "三" "四" "五" "六" "七" "八" "九" "十")
+      SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
       SPACES=()
       sid=0
       for i in "''${!SPACE_ICONS[@]}"
@@ -48,10 +48,6 @@ in
                                     label.drawing=off \
                                     click_script="yabai -m space --focus \$SID 2>/dev/null"
       done
-
-      sketchybar --add item text1 center \
-                 --set text1 icon="nyoom engineering:" \
-                      icon.font="Liga SFMono Nerd Font:Regular:15.0"
 
       sketchybar --add item window_title center \
                  --set window_title    script="${scripts}/window_title.sh" \

@@ -15,7 +15,7 @@ in
       window_placement = "second_child";
       # Gaps
       window_gap = 06;
-      top_padding = 12;
+      top_padding = 52;
       bottom_padding = 12;
       left_padding = 12;
       right_padding = 12;
