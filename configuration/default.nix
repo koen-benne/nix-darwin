@@ -44,10 +44,12 @@
       LaunchServices = {
         LSQuarantine = false;
       };
-
       NSGlobalDomain = {
+        AppleKeyboardUIMode = 3;
+        AppleFontSmoothing = 1;
         AppleShowAllExtensions = true;
         ApplePressAndHoldEnabled = false;
+        _HIHideMenuBar = true;
 
         # 120, 90, 60, 30, 12, 6, 2
         KeyRepeat = 2;
@@ -58,6 +60,7 @@
         "com.apple.mouse.tapBehavior" = 1;
         "com.apple.sound.beep.volume" = 0.0;
         "com.apple.sound.beep.feedback" = 0;
+        "com.apple.swipescrolldirection" = true;
       };
 
       finder = {
