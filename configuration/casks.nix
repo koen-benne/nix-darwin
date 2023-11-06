@@ -16,4 +16,7 @@
   # Browsers
   "brave-browser"
   "firefox"
+
+   # Design Tools
+   "figma"
 ]
