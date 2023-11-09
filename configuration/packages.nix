@@ -11,6 +11,8 @@ with pkgs;
   ripgrep
   lazygit
   gitui
+  stow
+  fzf
 
   yabai
   skhd
