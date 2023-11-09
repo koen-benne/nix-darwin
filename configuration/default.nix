@@ -5,6 +5,7 @@
    ./dock
    ./yabai.nix
    ./skhd.nix
+   ./fish.nix
   ];
 
   environment.systemPackages = [
@@ -88,32 +89,6 @@
 
   programs.bash.enable = true;
   programs.zsh.enable = true;
-  programs.fish = {
-      enable = true;
-      shellInit = ''
-        if test -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish
-          source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish
-        end
-      '';
-      interactiveShellInit = ''
-        set -U Z_CMD "j"
-        set -gx DIRENV_LOG_FORMAT ""
-      '';
-      shellAliases = {
-        vim = "nvim";
-      };
-      plugins = [
-        {
-          name = "z";
-          src = pkgs.fetchFromGitHub {
-            owner = "jethrokuan";
-            repo = "z";
-            rev = "85f863f20f24faf675827fb00f3a4e15c7838d76";
-            hash = "sha256-+FUBM7CodtZrYKqU542fQD+ZDGrd2438trKM0tIESs0=";
-          };
-        }
-      ];
-    };
 
   # Used for backwards compatibility, please read the changelog before changing.
 
