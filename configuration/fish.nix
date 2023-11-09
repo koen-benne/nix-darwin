@@ -10,6 +10,7 @@
     interactiveShellInit = ''
       set -U Z_CMD "j"
       set -gx DIRENV_LOG_FORMAT ""
+      set -g fish_greeting
     '';
     shellAliases = {
       vim = "nvim";

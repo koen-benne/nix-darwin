@@ -6,6 +6,7 @@
    ./yabai.nix
    ./skhd.nix
    ./fish.nix
+   ./kitty.nix
   ];
 
   environment.systemPackages = [
