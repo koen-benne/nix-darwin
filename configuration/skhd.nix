@@ -48,7 +48,7 @@
       # alt -return : ~/.scripts/launch-iterm
       alt - return : ~/.scripts/launch-kitty
       # open browser
-      alt - w : sudo -u koenbenne /Applications/Firefox.app/Contents/MacOS/firefox-bin
+      alt - w : sudo -u koenbenne /Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser
       # close current window
       alt - q : yabai -m window --close
       # enter fullscreen mode for the focused container
@@ -58,8 +58,8 @@
       # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
       shift + cmd - n : yabai -m space --create && \
                         index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
-                        yabai -m window --space "${index}" && \
-                        yabai -m space --focus "${index}"
+                        yabai -m window --space "$\{index}" && \
+                        yabai -m space --focus "$\{index}"
 
       alt - space : ~/.scripts/popup.sh ~/.scripts/launcher.sh
     '';

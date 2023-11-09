@@ -1,6 +1,6 @@
 { pkgs, lib, inputs, config, ... }:
 let
-  scripts = ../scripts/sketchybar;
+  scripts = ../scripts;
 in
 {
   services.yabai = {
@@ -15,7 +15,8 @@ in
       window_placement = "second_child";
       # Gaps
       window_gap = 06;
-      top_padding = 52;
+      # top_padding = 52;
+      top_padding = 12;
       bottom_padding = 12;
       left_padding = 12;
       right_padding = 12;
@@ -34,11 +35,8 @@ in
       launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist > /dev/null 2>&1 &
       # bar
       yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-      yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
       yabai -m signal --add event=display_added action="sleep 1 && ${scripts}/create_spaces.sh"
       yabai -m signal --add event=display_removed action="sleep 1 && ${scripts}/create_spaces.sh"
-      yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
-      yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
       ${scripts}/create_spaces.sh
       # rules
       yabai -m rule --add app="^(LuLu|Vimac|Calculator|Software Update|Dictionary|VLC|System Preferences|zoom.us|Photo Booth|Archive Utility|Python|LibreOffice|App Store|Steam|Alfred|Activity Monitor)$" manage=off

@@ -14,5 +14,4 @@ with pkgs;
 
   yabai
   skhd
-  sketchybar
 ]

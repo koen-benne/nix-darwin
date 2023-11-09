@@ -4,7 +4,7 @@
   imports = [
    ./dock
    ./yabai.nix
-   ./sketchybar.nix
+   # ./sketchybar
    ./skhd.nix
   ];
 
@@ -52,7 +52,7 @@
         AppleFontSmoothing = 1;
         AppleShowAllExtensions = true;
         ApplePressAndHoldEnabled = false;
-        _HIHideMenuBar = true;
+        _HIHideMenuBar = false;
 
         # 120, 90, 60, 30, 12, 6, 2
         KeyRepeat = 2;
@@ -87,10 +87,9 @@
     };
   };
 
-  # Create /etc/zshrc that loads the nix-darwin environment.
-  # programs.zsh.enable = true;  # default shell on catalina
+  programs.bash.enable = true;
+  programs.zsh.enable = true;
   programs.fish.enable = true;
-
 
   # Used for backwards compatibility, please read the changelog before changing.
 
