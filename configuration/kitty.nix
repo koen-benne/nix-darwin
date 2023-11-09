@@ -1,8 +1,8 @@
-{ pkgs, lib, inputs, config, ... }:
+{ pkgs, options, lib, inputs, config, ... }:
 {
-  programs.kitty = {
+  options.programs.kitty = {
     enable = true;
-    package = pkgs.kitty;
+    enableFishIntegration = true;
     extraConfig = ''
       background_opacity 0.9
       hide_window_decorations titlebar-only

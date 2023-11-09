@@ -10,6 +10,7 @@
   ];
 
   environment.systemPackages = [
+    # home manager has issues with adding apps
     pkgs.kitty
   ];
 
