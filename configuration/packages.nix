@@ -11,6 +11,7 @@ with pkgs;
   ripgrep
   lazygit
   gitui
+  kitty
   stow
   fzf
 

@@ -11,7 +11,7 @@
 
   environment.systemPackages = [
     # home manager has issues with adding apps
-    pkgs.kitty
+    # pkgs.kitty
   ];
 
   users.users.koenbenne = {

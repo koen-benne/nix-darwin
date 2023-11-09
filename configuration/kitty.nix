@@ -1,6 +1,6 @@
-{ pkgs, options, lib, inputs, config, ... }:
+{ pkgs, lib, inputs, config, ... }:
 {
-  options.programs.kitty = {
+  programs.kitty = {
     enable = true;
     enableFishIntegration = true;
     extraConfig = ''
