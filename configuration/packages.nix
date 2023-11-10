@@ -12,6 +12,7 @@ with pkgs;
   lazygit
   gitui
   kitty
+  tmux
   stow
   fzf
 

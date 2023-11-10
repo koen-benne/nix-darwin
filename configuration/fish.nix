@@ -11,6 +11,8 @@
       set -U Z_CMD "j"
       set -gx DIRENV_LOG_FORMAT ""
       set -g fish_greeting
+      # add .local/bin to path using fish's function for adding paths
+      fish_add_path $HOME/.local/bin
     '';
     shellAliases = {
       vim = "nvim";

@@ -6,7 +6,7 @@
    ./yabai.nix
    ./skhd.nix
    ./fish.nix
-   ./kitty.nix
+   # ./kitty.nix
   ];
 
   environment.systemPackages = [
@@ -23,6 +23,7 @@
 
   homebrew.enable = true;
   homebrew.casks = pkgs.callPackage ./casks.nix {};
+  homebrew.formulas = pkgs.callPackage ./formulas.nix {};
 
   # homebrew.masApps = {
   #   "1password" = 1333542190;
