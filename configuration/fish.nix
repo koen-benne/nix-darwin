@@ -1,6 +1,6 @@
 { pkgs, lib, inputs, config, ... }:
 {
-  options.programs.fish = {
+  programs.fish = {
     enable = true;
     shellInit = ''
       if test -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish
