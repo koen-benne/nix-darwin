@@ -9,6 +9,13 @@
    # ./kitty.nix
   ];
 
+  nix.registry."node".to = {
+    type = "github";
+    owner = "andyrichardson";
+    repo = "nix-node";
+  };
+  nix.binaryCaches = [ "https://cache.nixos.org/" "https://nix-node.cachix.org/" ];
+
   environment.systemPackages = [
     # home manager has issues with adding apps
     # pkgs.kitty

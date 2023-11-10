@@ -1,5 +1,4 @@
 {}:
 
 [
-  "ddev/ddev/ddev"
 ]
