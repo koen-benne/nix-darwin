@@ -18,4 +18,9 @@ with pkgs;
 
   yabai
   skhd
+
+  # fish plugins
+  fishPlugins.z
+  fishPlugins.pisces
+  fishPlugins.bobthefish
 ]
