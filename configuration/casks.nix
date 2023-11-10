@@ -3,6 +3,7 @@
 [
   # Development Tools
   "homebrew/cask/docker"
+  "lando"
 
   # Communication Tools
   "discord"

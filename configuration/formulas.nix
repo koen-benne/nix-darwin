@@ -1,5 +1,5 @@
 {}:
 
 [
-   "lando"
+  "ddev/ddev/ddev"
 ]

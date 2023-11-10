@@ -23,7 +23,7 @@
 
   homebrew.enable = true;
   homebrew.casks = pkgs.callPackage ./casks.nix {};
-  homebrew.packages = pkgs.callPackage ./formulas.nix {};
+  homebrew.taps = pkgs.callPackage ./formulas.nix {};
 
   # homebrew.masApps = {
   #   "1password" = 1333542190;
