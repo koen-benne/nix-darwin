@@ -1,5 +1,12 @@
 { config, pkgs, lib, ... }:
 {
+  users.users.koenbenne = {
+    name = "koenbenne";
+    home = "/Users/koenbenne";
+    isHidden = false;
+    shell = pkgs.fish;
+  };
+
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
@@ -16,6 +23,10 @@
           '
         '';
       };
+      imports = [
+        ./fish.nix
+        ./kitty.nix
+      ];
     };
   };
 }

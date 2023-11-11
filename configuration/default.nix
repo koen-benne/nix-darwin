@@ -6,8 +6,6 @@
     ./home-manager.nix
     ./yabai.nix
     ./skhd.nix
-    ./fish.nix
-    # ./kitty.nix
   ];
 
   nix.registry."node".to = {
@@ -15,19 +13,11 @@
     owner = "andyrichardson";
     repo = "nix-node";
   };
-  nix.binaryCaches = [ "https://cache.nixos.org/" "https://nix-node.cachix.org/" ];
 
   environment.systemPackages = [
     # home manager has issues with adding apps
     # pkgs.kitty
   ];
-
-  users.users.koenbenne = {
-    name = "koenbenne";
-    home = "/Users/koenbenne";
-    isHidden = false;
-    shell = pkgs.fish;
-  };
 
   homebrew.enable = true;
   homebrew.casks = pkgs.callPackage ./casks.nix {};
@@ -41,8 +31,11 @@
   services.nix-daemon.enable = true;
   nix = {
     package = pkgs.nixUnstable;
-    settings.trusted-users = [ "@admin" "koenbenne" ];
-    settings.experimental-features = "nix-command flakes";
+    settings = {
+      trusted-users = [ "@admin" "koenbenne" ];
+      experimental-features = "nix-command flakes";
+      substituters = [ "https://cache.nixos.org/" "https://nix-node.cachix.org/" ];
+    };
     gc = {
       user = "root";
       automatic = true;
@@ -100,6 +93,7 @@
 
   programs.bash.enable = true;
   programs.zsh.enable = true;
+  programs.fish.enable = true;
 
   # Used for backwards compatibility, please read the changelog before changing.
 

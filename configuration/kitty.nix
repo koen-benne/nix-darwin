@@ -2,7 +2,6 @@
 {
   programs.kitty = {
     enable = true;
-    enableFishIntegration = true;
     extraConfig = ''
       background_opacity 0.9
       hide_window_decorations titlebar-only

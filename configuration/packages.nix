@@ -6,7 +6,6 @@ with pkgs;
   btop
   neovim
   nodejs
-  zoxide
   git
   ripgrep
   lazygit
