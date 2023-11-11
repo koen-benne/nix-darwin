@@ -1,6 +1,6 @@
 { pkgs, lib, inputs, config, ... }:
 let
-  scripts = ../scripts;
+  scripts = ../../scripts;
 in
 {
   services.yabai = {
