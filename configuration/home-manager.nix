@@ -27,6 +27,7 @@
         ./programs/fish.nix
         ./programs/kitty.nix
         ./programs/tmux.nix
+        ./programs/lazygit.nix
       ];
     };
   };
