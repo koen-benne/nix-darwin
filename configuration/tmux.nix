@@ -2,7 +2,6 @@
 {
   programs.tmux = {
     enable = true;
-    shell = "\${pkgs.fish}/bin/fish";
     baseIndex = 1;
     prefix = "C-s";
     extraConfig = ''

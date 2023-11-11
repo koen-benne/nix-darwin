@@ -35,6 +35,24 @@
           sha256 = "0c5i7sdrsp0q3vbziqzdyqn4fmp235ax4mn4zslrswvn8g3fvdyh";
         };
       }
+      # {
+      #   name = "clearance";
+      #   src = pkgs.fetchFromGitHub {
+      #     owner = "oh-my-fish";
+      #     repo = "theme-clearance";
+      #     rev = "10683bae6e8481b1ca4196b2079881ab1862fa97";
+      #     sha256 = "0aavs5jdg0z81h56r3nsf0373zs534gjaca7wlsc29g0qd7z1kxg";
+      #   };
+      # }
+      {
+        name = "eclm";
+        src = pkgs.fetchFromGitHub {
+          owner = "oh-my-fish";
+          repo = "theme-eclm";
+          rev = "185c84a41947142d75c68da9bc6c59bcd32757e7";
+          sha256 = "1gx7y6b752wvrahw9krdh54g84mapb6nir053nvyni0c1kijw69q";
+        };
+      }
     ];
   };
 }
