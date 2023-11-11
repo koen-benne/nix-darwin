@@ -2,11 +2,12 @@
 
 {
   imports = [
-   ./dock
-   ./yabai.nix
-   ./skhd.nix
-   ./fish.nix
-   # ./kitty.nix
+    ./dock
+    ./home-manager.nix
+    ./yabai.nix
+    ./skhd.nix
+    ./fish.nix
+    # ./kitty.nix
   ];
 
   nix.registry."node".to = {
@@ -106,25 +107,6 @@
   nixpkgs.hostPlatform = "x86_64-darwin";
 
   nixpkgs.config.allowUnfree = true;
-  # `home-manager` config
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    users.koenbenne = { lib, ... }: {
-      home.stateVersion = "23.05";
-      home.packages = pkgs.callPackage ./packages.nix {};
-      home.activation = {
-        setWallpaper = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-          /usr/bin/osascript -e '
-            set desktopImage to POSIX file "${config.users.users."koenbenne".home}/.config/nix-darwin/wallpaper.jpg"
-            tell application "Finder"
-              set desktop picture to desktopImage
-            end tell
-          '
-        '';
-      };
-    };
-  };
 
   local.dock.enable = true;
   local.dock.entries = [

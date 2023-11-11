@@ -1,4 +1,4 @@
-{ pkgs, lib, inputs, config, ... }:
+{ home-manager, pkgs, lib, inputs, config, ... }:
 {
   programs.fish = {
     enable = true;

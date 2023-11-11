@@ -15,12 +15,8 @@ with pkgs;
   tmux
   stow
   fzf
+  fish
 
   yabai
   skhd
-
-  # fish plugins
-  fishPlugins.z
-  fishPlugins.pisces
-  fishPlugins.bobthefish
 ]
