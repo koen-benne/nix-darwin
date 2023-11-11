@@ -44,6 +44,15 @@
           sha256 = "1gx7y6b752wvrahw9krdh54g84mapb6nir053nvyni0c1kijw69q";
         };
       }
+      {
+        name = "wakatime";
+        src = pkgs.fetchFromGitHub {
+          owner = "ik11235";
+          repo = "wakatime.fish";
+          rev = "cb88b955546642b0d41c80d14ae740a4426c4fbb";
+          sha256 = "03b5yrldfsz3ypjmw90qlwd8dfp721664g202yhbclqdz67gqimp";
+        };
+      }
     ];
   };
 }

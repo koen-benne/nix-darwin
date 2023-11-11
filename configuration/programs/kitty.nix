@@ -14,14 +14,14 @@
       window_padding_width 5
 
       foreground   #e1dde6
-      background   #130c43
+      background   #0c1e43
       cursor       #e1dde6
 
       remember_window_size no
       initial_window_width 300c
       initial_window_height 60c
 
-      color0       #130c43
+      color0       #0c1e43
       color8       #9d9aa1
       color1       #C7669B
       color9       #C7669B

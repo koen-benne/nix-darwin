@@ -15,6 +15,7 @@ with pkgs;
   stow
   fzf
   fish
+  wakatime
 
   yabai
   skhd
