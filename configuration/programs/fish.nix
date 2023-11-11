@@ -35,15 +35,6 @@
           sha256 = "0c5i7sdrsp0q3vbziqzdyqn4fmp235ax4mn4zslrswvn8g3fvdyh";
         };
       }
-      # {
-      #   name = "clearance";
-      #   src = pkgs.fetchFromGitHub {
-      #     owner = "oh-my-fish";
-      #     repo = "theme-clearance";
-      #     rev = "10683bae6e8481b1ca4196b2079881ab1862fa97";
-      #     sha256 = "0aavs5jdg0z81h56r3nsf0373zs534gjaca7wlsc29g0qd7z1kxg";
-      #   };
-      # }
       {
         name = "eclm";
         src = pkgs.fetchFromGitHub {

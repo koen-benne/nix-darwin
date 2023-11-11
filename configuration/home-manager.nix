@@ -24,9 +24,9 @@
         '';
       };
       imports = [
-        ./fish.nix
-        ./kitty.nix
-        ./tmux.nix
+        ./programs/fish.nix
+        ./programs/kitty.nix
+        ./programs/tmux.nix
       ];
     };
   };

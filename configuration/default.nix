@@ -4,10 +4,15 @@
   imports = [
     ./dock
     ./home-manager.nix
-    ./yabai.nix
-    ./skhd.nix
+
+    # set up programs globally
+    # usually better to set up per user in home manager
+    ./services/yabai.nix
+    ./services/skhd.nix
   ];
 
+  # allows me to do nix shell node#[version] better than with nixpkgs
+  # its old tho
   nix.registry."node".to = {
     type = "github";
     owner = "andyrichardson";
@@ -15,17 +20,18 @@
   };
 
   environment.systemPackages = [
-    # home manager has issues with adding apps
-    # pkgs.kitty
+    # place to add programs system wide
   ];
 
-  homebrew.enable = true;
-  homebrew.casks = pkgs.callPackage ./casks.nix {};
-  homebrew.taps = pkgs.callPackage ./formulas.nix {};
+  homebrew = {
+    enable = true;
+    casks = pkgs.callPackage ./casks.nix {};
+    taps = pkgs.callPackage ./formulas.nix {};
+    # masApps = {
+    #   "1password" = 1333542190;
+    # };
+  };
 
-  # homebrew.masApps = {
-  #   "1password" = 1333542190;
-  # };
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
@@ -42,6 +48,13 @@
       interval = { Weekday = 0; Hour = 2; Minute = 0; };
       options = "--delete-older-than 30d";
     };
+  };
+
+  # Necessary for settings environment variables n shi.
+  programs = {
+    bash.enable = true;
+    zsh.enable = true;
+    fish.enable = true;
   };
 
   system = {
@@ -91,16 +104,10 @@
     };
   };
 
-  programs.bash.enable = true;
-  programs.zsh.enable = true;
-  programs.fish.enable = true;
-
-  # Used for backwards compatibility, please read the changelog before changing.
-
-  # The platform the configuration will be used on.
-  nixpkgs.hostPlatform = "x86_64-darwin";
-
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    hostPlatform = "x86_64-darwin";
+    config.allowUnfree = true;
+  };
 
   local.dock.enable = true;
   local.dock.entries = [
