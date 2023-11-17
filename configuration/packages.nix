@@ -19,4 +19,6 @@ with pkgs;
 
   yabai
   skhd
+
+  syncthing
 ]
