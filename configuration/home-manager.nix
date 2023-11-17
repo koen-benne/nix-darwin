@@ -28,7 +28,7 @@
         ./programs/kitty.nix
         ./programs/tmux.nix
         ./programs/lazygit.nix
-        # ./services/syncthing.nix
+        ./services/syncthing.nix
       ];
     };
   };

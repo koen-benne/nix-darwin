@@ -1,6 +1,6 @@
 { pkgs, lib, inputs, config, ... }:
 {
-  programs.syncthing = {
+  services.syncthing = {
     enable = true;
   };
 }
