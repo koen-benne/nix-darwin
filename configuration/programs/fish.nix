@@ -24,6 +24,7 @@
       tp = "turbotmux project";
       tn = "turbotmux new";
       darwin-switch = "darwin-rebuild switch --flake ~/.config/nix-darwin";
+      darwin-update = "nix flake update ~/.config/nix-darwin";
     };
     plugins = [
       {
