@@ -22,6 +22,6 @@ with pkgs;
 
   syncthing
 
-  gpg
+  gnupg
   pass
 ]
