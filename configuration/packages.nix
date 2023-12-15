@@ -21,4 +21,7 @@ with pkgs;
   skhd
 
   syncthing
+
+  gpg
+  pass
 ]
