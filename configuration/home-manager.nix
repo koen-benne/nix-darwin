@@ -28,6 +28,7 @@
         ./programs/kitty.nix
         ./programs/tmux.nix
         ./programs/lazygit.nix
+        ./programs/pass.nix
         ./services/syncthing.nix
       ];
     };

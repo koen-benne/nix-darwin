@@ -2,6 +2,9 @@
 
 with pkgs;
 [
+  gnupg
+  browserpass
+
   dockutil
   btop
   neovim
@@ -22,8 +25,4 @@ with pkgs;
   skhd
 
   syncthing
-
-  gnupg
-  (pass.withExtensions (extensions: with extensions; [ pass-otp ]))
-  browserpass
 ]
