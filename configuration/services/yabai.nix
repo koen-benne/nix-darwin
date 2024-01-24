@@ -44,6 +44,7 @@ in
       yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
       yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
       yabai -m rule --add label="Select file to save to" app="^Inkscape$" title="Select file to save to" manage=off
+      yabai -m rule --add label="kittypopup" app="kitty" title="kittypopup" manage=off
     '';
   };
 }

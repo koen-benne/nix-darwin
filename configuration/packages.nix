@@ -25,4 +25,6 @@ with pkgs;
   skhd
 
   syncthing
+
+  ddev
 ]

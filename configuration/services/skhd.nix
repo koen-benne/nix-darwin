@@ -47,6 +47,7 @@
       # open terminal
       # alt -return : ~/.scripts/launch-iterm
       alt - return : ~/.scripts/launch-kitty
+      alt - p : ~/.scripts/kittypass
       # open browser
       alt - w : sudo -u koenbenne /Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser
       # close current window
