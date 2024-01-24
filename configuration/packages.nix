@@ -8,6 +8,7 @@ with pkgs;
   nodejs
   git
   ripgrep
+  fd
   lazygit
   gitui
   kitty
@@ -23,5 +24,6 @@ with pkgs;
   syncthing
 
   gnupg
-  pass
+  (pass.withExtensions (extensions: with extensions; [ pass-otp ]))
+  browserpass
 ]
