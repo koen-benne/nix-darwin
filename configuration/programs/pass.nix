@@ -6,8 +6,5 @@
       pass-otp
       pass-update
     ]);
-    settings = {
-      PASSWORD_STORE_DIR = "$HOME/.password-store";
-    };
   };
 }
