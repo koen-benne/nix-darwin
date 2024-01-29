@@ -4,11 +4,16 @@ with pkgs;
 [
   gnupg
   browserpass
+  zbar
 
   dockutil
   btop
   neovim
+
   nodejs
+  nodePackages.pnpm
+  nodePackages.yarn
+
   git
   ripgrep
   fd
@@ -26,5 +31,8 @@ with pkgs;
 
   syncthing
 
+  mkcert
   ddev
+
+  platformsh
 ]
