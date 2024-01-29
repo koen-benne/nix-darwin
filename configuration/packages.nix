@@ -35,4 +35,5 @@ with pkgs;
   ddev
 
   platformsh
+  fastfetch
 ]
