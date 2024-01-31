@@ -35,5 +35,5 @@ with pkgs;
   ddev
 
   platformsh
-  fastfetch
+  neofetch
 ]
