@@ -19,8 +19,9 @@ with pkgs;
   fd
   lazygit
   gitui
+
   kitty
-  tmux
+
   stow
   fzf
   fish
