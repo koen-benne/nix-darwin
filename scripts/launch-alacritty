@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# check if alacritty is running
+if ! pgrep -x "alacritty" > /dev/null
+then
+    alacritty
+else
+    alacritty msg create-window
+fi

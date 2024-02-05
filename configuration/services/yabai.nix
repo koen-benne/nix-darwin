@@ -1,4 +1,4 @@
-{ pkgs, lib, inputs, config, ... }:
+{ self, pkgs, lib, inputs, config, ... }:
 let
   scripts = ../../scripts;
 in

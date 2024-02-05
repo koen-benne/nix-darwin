@@ -1,5 +1,9 @@
 { pkgs, lib, inputs, config, ... }:
-
+let
+  # import scripts folder in this flake
+  scripts = lib.cleanSource ../../scripts;
+  launchAlacritty = ../../scripts/launch-alacritty;
+in
 {
   services.skhd = {
     enable = true;
@@ -45,9 +49,10 @@
       alt - 8 : yabai -m space --focus 8
       alt - 9 : yabai -m space --focus 9
       # open terminal
-      # alt -return : ~/.scripts/launch-iterm
-      alt - return : ~/.scripts/launch-kitty
-      alt - p : ~/.scripts/kittypass
+      # alt - return : ~/.scripts/launch-kitty
+      # alt - return : ${scripts}/launch-alacritty
+      alt - return : ${launchAlacritty}
+      alt - p : ~/.scripts/popup.sh ~/.scripts/kittypass
       # open browser
       alt - w : sudo -u koenbenne /Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser
       # close current window
