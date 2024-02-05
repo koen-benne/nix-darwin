@@ -7,6 +7,7 @@
 
     # set up programs globally
     # usually better to set up per user in home manager
+    # yabai and skhd need to be set up globally for some reason
     ./services/yabai.nix
     ./services/skhd.nix
   ];

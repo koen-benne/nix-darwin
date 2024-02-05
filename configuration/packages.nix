@@ -17,20 +17,11 @@ with pkgs;
   git
   ripgrep
   fd
-  lazygit
   gitui
-
-  kitty
 
   stow
   fzf
-  fish
   wakatime
-
-  yabai
-  skhd
-
-  syncthing
 
   mkcert
   ddev
