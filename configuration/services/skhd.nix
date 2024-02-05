@@ -49,9 +49,7 @@ in
       alt - 8 : yabai -m space --focus 8
       alt - 9 : yabai -m space --focus 9
       # open terminal
-      # alt - return : ~/.scripts/launch-kitty
-      # alt - return : ${scripts}/launch-alacritty
-      alt - return : ${launchAlacritty}
+      alt - return : ~/.config/nix-darwin/scripts/launch-alacritty
       alt - p : ~/.scripts/popup.sh ~/.scripts/kittypass
       # open browser
       alt - w : sudo -u koenbenne /Applications/Brave\ Browser.app/Contents/MacOS/Brave\ Browser
