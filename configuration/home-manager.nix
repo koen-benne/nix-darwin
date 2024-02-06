@@ -11,7 +11,7 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     users.koenbenne = { lib, ... }: {
-      home.stateVersion = "23.05";
+      home.stateVersion = "23.11";
       home.packages = pkgs.callPackage ./packages.nix {};
       home.activation = {
         setWallpaper = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
