@@ -13,6 +13,7 @@
   "appcleaner"
   "syncthing"
   "1password"
+  "onyx"
 
   # Browsers
   "brave-browser"
