@@ -1,4 +1,4 @@
-{ self, pkgs, config, home-manager, lib, ... }:
+{ self, pkgs, config, home-manager, lib, overlays, ... }:
 
 {
   imports = [
@@ -41,7 +41,8 @@
     settings = {
       trusted-users = [ "@admin" "koenbenne" ];
       experimental-features = "nix-command flakes";
-      substituters = [ "https://cache.nixos.org/" "https://nix-node.cachix.org/" ];
+      substituters = [ "https://cache.nixos.org/" "https://nix-node.cachix.org/?priority=10" "https://nix-community.cachix.org/?priority=10" ];
+      trusted-public-keys = [ "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" "nix-node.cachix.org-1:2YOHGtGxa8VrFiWAkYnYlcoQ0sSu+AqCniSfNagzm60="];
     };
     gc = {
       user = "root";

@@ -28,4 +28,5 @@ with pkgs;
 
   platformsh
   neofetch
+  cachix
 ]

@@ -26,11 +26,17 @@
       url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nix-homebrew, homebrew-core, homebrew-cask, homebrew-bundle, nixpkgs, home-manager }:
+  outputs = { self, nix-darwin, nix-homebrew, homebrew-core, homebrew-cask, homebrew-bundle, nixpkgs, home-manager, ... }@inputs:
     let
       user = "koenbenne";
+      overlays = [
+        inputs.neovim-nightly-overlay.overlay
+      ];
     in
     {
       darwinConfigurations."MBP-KoenB" = nix-darwin.lib.darwinSystem {
