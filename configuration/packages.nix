@@ -8,7 +8,7 @@ with pkgs;
 
   dockutil
   btop
-  neovim
+  # neovim
 
   nodejs
   nodePackages.pnpm
@@ -29,4 +29,6 @@ with pkgs;
   platformsh
   neofetch
   cachix
+
+  ueberzugpp
 ]

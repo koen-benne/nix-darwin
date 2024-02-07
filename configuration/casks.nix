@@ -11,7 +11,6 @@
 
   # Utility Tools
   "appcleaner"
-  "syncthing"
   "1password"
   "onyx"
 

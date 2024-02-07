@@ -31,6 +31,7 @@
         ./programs/lazygit.nix
         ./programs/pass.nix
         ./programs/alacritty.nix
+        ./programs/neovim.nix
         ./services/syncthing.nix
       ];
     };
