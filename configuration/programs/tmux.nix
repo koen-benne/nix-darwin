@@ -8,6 +8,7 @@
       set -ga terminal-overrides ",screen-256color*:Tc"
       set-option -g default-terminal "screen-256color"
       set -s escape-time 0
+      set -gq allow-passthrough on
 
       bind-key C-a send-prefix
       set -g status-style 'bg=#333333 fg=#5eacd3'
