@@ -31,7 +31,7 @@
     };
   };
 
-  outputs = { self, nix-darwin, nix-homebrew, homebrew-core, homebrew-cask, homebrew-bundle, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nix-darwin, nix-homebrew, homebrew-core, homebrew-cask, homebrew-bundle, home-manager, ... }@inputs:
     let
       user = "koenbenne";
       overlays = [
@@ -40,9 +40,10 @@
     in
     {
       darwinConfigurations."MBP-KoenB" = nix-darwin.lib.darwinSystem {
+        system = "x86_64-darwin";
         modules = [
-          home-manager.darwinModules.home-manager
           {
+            nixpkgs.overlays = overlays;
             nix-homebrew = {
               enable = true;
               user = "koenbenne";
@@ -55,6 +56,7 @@
               autoMigrate = true;
             };
           }
+          home-manager.darwinModules.home-manager
           nix-homebrew.darwinModules.nix-homebrew
           ./configuration
         ];

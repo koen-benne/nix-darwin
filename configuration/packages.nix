@@ -8,7 +8,6 @@ with pkgs;
 
   dockutil
   btop
-  # neovim
 
   nodejs
   nodePackages.pnpm
