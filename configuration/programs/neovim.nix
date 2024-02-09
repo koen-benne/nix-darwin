@@ -8,7 +8,8 @@
   ];
   programs.neovim = {
     enable = true;
-    package = pkgs.neovim-nightly;
+    # package = pkgs.neovim-nightly;
+    package = pkgs.neovim;
     extraLuaPackages = ps: [ ps.magick ];
   };
 }
