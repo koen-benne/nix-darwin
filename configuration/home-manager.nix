@@ -1,4 +1,4 @@
-{ self, config, pkgs, lib, overlays, ... }:
+{ self, config, pkgs, lib, ... }:
 {
   users.users.koenbenne = {
     name = "koenbenne";
@@ -11,7 +11,6 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     users.koenbenne = { lib, overlays, ... }: {
-      nixpkgs.overlays = overlays;
       home.stateVersion = "23.11";
       home.packages = pkgs.callPackage ./packages.nix {};
       home.activation = {

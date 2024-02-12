@@ -46,7 +46,7 @@
             nixpkgs.overlays = overlays;
             nix-homebrew = {
               enable = true;
-              user = "koenbenne";
+              user = user;
               taps = {
                 "homebrew/homebrew-core" = homebrew-core;
                 "homebrew/homebrew-cask" = homebrew-cask;
