@@ -29,5 +29,7 @@ with pkgs;
   neofetch
   cachix
 
+  jq
+
   ueberzugpp
 ]

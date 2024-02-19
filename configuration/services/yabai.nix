@@ -35,9 +35,9 @@ in
       launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist > /dev/null 2>&1 &
       # bar
       yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-      yabai -m signal --add event=display_added action="sleep 1 && ${scripts}/create_spaces.sh"
-      yabai -m signal --add event=display_removed action="sleep 1 && ${scripts}/create_spaces.sh"
-      ${scripts}/create_spaces.sh
+      yabai -m signal --add event=display_added action="sleep 1 && ${scripts}/setup_spaces.sh"
+      yabai -m signal --add event=display_removed action="sleep 1 && ${scripts}/setup_spaces.sh"
+      ${scripts}/setup_spaces.sh
       # rules
       yabai -m rule --add app="^(LuLu|Vimac|Calculator|Software Update|Dictionary|VLC|System Preferences|zoom.us|Photo Booth|Archive Utility|Python|LibreOffice|App Store|Steam|Alfred|Activity Monitor)$" manage=off
       yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
